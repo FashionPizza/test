@@ -13,7 +13,7 @@
  z-index: -1;
 }
 
-.main-tittle {
+.main-title {
   top: 220px;
   font-weight: 400;
   font-style: normal;
@@ -71,7 +71,6 @@
 }
 
 .product-card__title {
-
   font-weight: 700;
   font-size: 20px;
   line-height: 27px;
@@ -112,7 +111,6 @@
   margin: 0 0 0 15px;
   font-style: normal;
 }
-
 
 .product-card__price-wrapper {
   width: 100%;
