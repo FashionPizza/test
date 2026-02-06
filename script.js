@@ -3,12 +3,12 @@ mainTitle.addEventListener('mouseenter', () => {
   console.log(mainTitle.textContent);
 });
 
-const changeColorBtn = document.getElementById('change-color-btn');
-const toggleColors = ['#f093f0', '#0eff1a'];
+const colorChangeBtn = document.getElementById('color-change-btn');
+const colors = ['#f093f0', '#0eff1a'];
 
-changeColorBtn.toggled = false;
+colorChangeBtn.toggled = false;
 
-changeColorBtn.addEventListener('click', () => {
-  changeColorBtn.style.backgroundColor = toggleColors[+changeColorBtn.toggled];
-  changeColorBtn.toggled = !changeColorBtn.toggled;
+colorChangeBtn.addEventListener('click', () => {
+  colorChangeBtn.style.backgroundColor = colors[+colorChangeBtn.toggled];
+  colorChangeBtn.toggled = !colorChangeBtn.toggled;
 });
