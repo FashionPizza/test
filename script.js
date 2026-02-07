@@ -4,9 +4,15 @@ mainTitle.addEventListener('mouseenter', () => {
 });
 
 const colorBtn = document.querySelector('#color-btn');
-colorBtn.toggled = false;
 
 colorBtn.addEventListener('click', () => {
-  colorBtn.style.backgroundColor = colorBtn.toggled ? '#f093f0' : '#0eff1a';
-  colorBtn.toggled = !colorBtn.toggled;
+  if (!colorBtn.classList.contains('green') && !colorBtn.classList.contains('purple')) {
+    colorBtn.classList.add('green');
+  } else if (colorBtn.classList.contains('green')) {
+    colorBtn.classList.remove('green');
+    colorBtn.classList.add('purple');
+  } else {
+    colorBtn.classList.remove('purple');
+    colorBtn.classList.add('green');
+  }
 });
