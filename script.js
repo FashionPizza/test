@@ -6,13 +6,6 @@ mainTitle.addEventListener('mouseenter', () => {
 const colorBtn = document.querySelector('#color-btn');
 
 colorBtn.addEventListener('click', () => {
-  if (!colorBtn.classList.contains('green') && !colorBtn.classList.contains('purple')) {
-    colorBtn.classList.add('green');
-  } else if (colorBtn.classList.contains('green')) {
-    colorBtn.classList.remove('green');
-    colorBtn.classList.add('purple');
-  } else {
-    colorBtn.classList.remove('purple');
-    colorBtn.classList.add('green');
-  }
+  const isGreen = colorBtn.classList.toggle('green');
+  colorBtn.classList.toggle('purple', !isGreen);
 });
