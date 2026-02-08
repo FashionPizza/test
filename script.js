@@ -6,6 +6,5 @@ mainTitle.addEventListener('mouseenter', () => {
 const colorBtn = document.querySelector('#color-btn');
 
 colorBtn.addEventListener('click', () => {
-  const isGreen = colorBtn.classList.toggle('green');
-  colorBtn.classList.toggle('purple', !isGreen);
+  colorBtn.classList.toggle('purple');
 });
