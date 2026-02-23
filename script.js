@@ -109,21 +109,21 @@ console.log(carDetails);
 // Написать функцию которая аргументом будет принимать объект, описанный в пункте №4. 
 // Она проверяет, есть ли в объекте свойство "максимальная скорость", 
 // если нет - добавляет его и задает значение, если есть - прекращает выполнение (ничего не делает)
-function isMaxSpeed(car) {
+function addMaxSpeedValue(car) {
   if (!car.hasOwnProperty('maxSpeed')) {
     car.maxSpeed = 333;
   }
 }
-isMaxSpeed(carDetails);
+addMaxSpeedValue(carDetails);
 console.log(carDetails);
 
 // Написать функцию, которая получает первым аргументом — объект, 
 // а вторым аргументом — свойство объекта, которое нужно вывести и выводит его значение.
-function propertyAndValue(object, property) {
+function printPropertyValue(object, property) {
   console.log(property + ': ' + object[property]);
 }
 
-propertyAndValue(carDetails, 'model');
+printPropertyValue(carDetails, 'model');
 
 // Создать массив, который содержит названия продуктов (просто строки)
 const food = ['плов', 'бургер', 'суп', 'салат', 'шаурма'];
@@ -133,12 +133,36 @@ const food = ['плов', 'бургер', 'суп', 'салат', 'шаурма'
 // После, используя известный нам метод массив, добавить еще одну книгу в конец списка. 
 // Можете заменить книги на фильмы, или другую сущность, идею вы поняли.
 const books = [
-  { title: 'Кто съел мой пирожок?', author: 'Джордж Игнасио', year: '1959', coverColor: 'синий', genre: 'детектив'},
-  { title: 'Большая пицца', author: 'Чак Ли', year: '2025', coverColor: 'зеленый', genre: 'кулинария'},
-  { title: 'Шоколадные рецепты', author: 'Джон Роулинг', year: '2009', coverColor: 'белый', genre: 'кулинария'}
+  { 
+    title: 'Кто съел мой пирожок?',
+    author: 'Джордж Игнасио',
+    year: '1959',
+    coverColor: 'синий',
+    genre: 'детектив'
+  },
+  { 
+    title: 'Большая пицца',
+    author: 'Чак Ли',
+    year: '2025',
+    coverColor: 'зеленый',
+    genre: 'кулинария'
+  },
+  { 
+    title: 'Шоколадные рецепты',
+    author: 'Джон Роулинг',
+    year: '2009',
+    coverColor: 'белый',
+    genre: 'кулинария'
+  }
 ];
 
-books.push({ title: 'Рецепт борща', author: 'Себастьян Лукас', year: '2015', coverColor: 'серый', genre: 'кулинария'});
+books.push({ 
+  title: 'Рецепт борща',
+  author: 'Себастьян Лукас',
+  year: '2015',
+  coverColor: 'серый',
+  genre: 'кулинария'
+});
 console.log(books);
 
 // Создать еще один массив, состоящих из тех же книг, но относящийся к определенной вселенной 
@@ -146,9 +170,27 @@ console.log(books);
 // С помощью известного нам метода массива или оператора (рекомендую использовать оператор), 
 // объединить эти два массива в один
 const kitchenBooks = [
-  { title: 'Салаты', author: 'Чак Ли', year: '2001', coverColor: 'красный', genre: 'кулинария'},
-  { title: 'Рецепты на утро', author: 'Чак Ли', year: '2006', coverColor: 'белый', genre: 'кулинария'},
-  { title: 'Как стать поваром', author: 'Чак Ли', year: '1998', coverColor: 'красный', genre: 'кулинария'}
+  { 
+    title: 'Салаты',
+    author: 'Чак Ли',
+    year: '2001',
+    coverColor: 'красный',
+    genre: 'кулинария'
+  },
+  { 
+    title: 'Рецепты на утро',
+    author: 'Чак Ли',
+    year: '2006',
+    coverColor: 'белый',
+    genre: 'кулинария'
+  },
+  { 
+    title: 'Как стать поваром',
+    author: 'Чак Ли',
+    year: '1998',
+    coverColor: 'красный',
+    genre: 'кулинария'
+  }
 ];
 
 const allBooks = [... books, ... kitchenBooks];
@@ -168,4 +210,4 @@ function markRareBooks(myBooks) {
 };
 
 const updatedBooks = markRareBooks(kitchenBooks);
-console.log(updatedBooks)
+console.log(updatedBooks);
