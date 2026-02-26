@@ -47,11 +47,11 @@ console.log(carDetails);
 
 // Написать функцию, которая получает первым аргументом — объект, 
 // а вторым аргументом — свойство объекта, которое нужно вывести и выводит его значение.
-function printModelPropertyValue(object, property) {
+function showObjectProperty(object, property) {
   console.log(property + ': ' + object[property]);
 }
 
-printModelPropertyValue(carDetails, 'model');
+showObjectProperty(carDetails, 'model');
 
 // Создать массив, который содержит названия продуктов (просто строки)
 const food = ['плов', 'бургер', 'суп', 'салат', 'шаурма'];
@@ -130,12 +130,12 @@ console.log(allBooks);
 // (или какой-то логики, связанной с вашей сущностью), устанавливаем true или false. 
 // Что я хочу этим сказать: если книга выпущена позже 2000 года, устанавливаем true (да, это редкий),
 // нет - false (значит это не редкий).
-function markRareBooks(myBooks) {
+function getRareBooks(myBooks) {
   return myBooks.map(book => ({
     ...book,
     isRare: book.year > 2000
   }))
 };
 
-const updatedBooks = markRareBooks(kitchenBooks);
+const updatedBooks = getRareBooks(kitchenBooks);
 console.log(updatedBooks);
