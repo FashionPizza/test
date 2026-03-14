@@ -28,8 +28,8 @@ console.log(result);
 console.log(fruits);
 
 // Вывести в консоль массив тех комментариев, почта пользователей которых содержит ".com"
-const getComEmails = comments.filter(comment => comment.email.includes(".com"));
-console.log("Комментарии с .com:", getComEmails);
+const commentsWithComEmails = comments.filter(comment => comment.email.includes(".com"));
+console.log("Комментарии с .com:", commentsWithComEmails);
 
 // Перебрать массив таким образом, что бы пользователи с id меньше или равно 5 имели postId: 2, 
 // а те, у кого id больше 5, имели postId: 1
@@ -37,8 +37,8 @@ comments.forEach(comment => comment.postId = comment.id <= 5 ? 2 : 1);
 console.log("Комментарии с обновленным postId:", comments);
 
 // Перебрать массив, что бы объекты состояли только из айди и имени
-const getIdAndName = comments.map(comment => ({ id: comment.id, name: comment.name }));
-console.log("Только id и name:", getIdAndName);
+const IdAndName = comments.map(comment => ({ id: comment.id, name: comment.name }));
+console.log("Только id и name:", IdAndName);
 
 // Перебираем массив, добавляем объектам свойство isInvalid и проверяем: 
 // если длина тела сообщения (body) больше 180 символов - устанавливаем true, меньше - false.
@@ -48,21 +48,21 @@ console.log("Комментарии с isInvalid:", comments);
 // Почитать про метод массива reduce. Используя его, вывести массив почт 
 // и провернуть тоже самое с помощью метода map
 // reduce
-const getEmailsReduce = comments.reduce((acc, comment) => {
+const commentEmailsByReduce = comments.reduce((acc, comment) => {
   acc.push(comment.email);
   return acc;
 }, []);
 
-console.log("Emails через reduce:", getEmailsReduce);
+console.log("Emails через reduce:", commentEmailsByReduce);
 
-const getEmailsMap = comments.map(comment => comment.email);
+const commentEmailsByMap = comments.map(comment => comment.email);
 
-console.log("Emails через map:", getEmailsMap);
+console.log("Emails через map:", commentEmailsByMap);
 
 // Почитать про методы toString(), join() и перебрав массив с задания №11, привести его к строке.
 // toString
-const emailsString1 = getEmailsMap.toString();
+const emailsString1 = commentEmailsByMap.toString();
 console.log("toString:", emailsString1);
 
-const emailsString2 = getEmailsMap.join(", ");
+const emailsString2 = commentEmailsByMap.join(", ");
 console.log("join:", emailsString2);
