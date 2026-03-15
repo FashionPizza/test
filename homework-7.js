@@ -12,9 +12,9 @@ console.log(result);
 // (название фильмов/книг, кухонные приборы, мебель и т.д.), 
 // проверить, есть ли в массиве какая-то определенная сущность.
 const fruits = ["яблоко", "банан", "апельсин", "груша", "ананас"];
-const check = "банан";
+const banana = "банан";
 
-console.log(fruits.includes(check) ? `${check} есть в массиве` : `${check} нет в массиве`);
+console.log(fruits.includes(banana) ? `${banana} есть в массиве` : `${banana} нет в массиве`);
 
 // Написать функцию, которая аргументом будет принимать массив 
 // и изменять его порядок на противоположный ("переворачивать"). 
@@ -37,13 +37,17 @@ comments.forEach(comment => comment.postId = comment.id <= 5 ? 2 : 1);
 console.log("Комментарии с обновленным postId:", comments);
 
 // Перебрать массив, что бы объекты состояли только из айди и имени
-const IdAndName = comments.map(comment => ({ id: comment.id, name: comment.name }));
-console.log("Только id и name:", IdAndName);
+const idWithName = comments.map(comment => ({ id: comment.id, name: comment.name }));
+console.log("Только id и name:", idWithName);
 
 // Перебираем массив, добавляем объектам свойство isInvalid и проверяем: 
 // если длина тела сообщения (body) больше 180 символов - устанавливаем true, меньше - false.
-comments.forEach(comment => comment.isInvalid = comment.body.length > 180);
-console.log("Комментарии с isInvalid:", comments);
+const updatedComments = comments.map(comment => ({
+  ...comment,
+  isInvalid: comment.body.length > 180
+}));
+
+console.log("Комментарии с isInvalid:", updatedComments);
 
 // Почитать про метод массива reduce. Используя его, вывести массив почт 
 // и провернуть тоже самое с помощью метода map
