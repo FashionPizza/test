@@ -9,7 +9,7 @@ export const productCards = [
       "солнцезащитные компоненты"
     ],
     price: 2750,
-    img: "/images/moisturizing-mousse.png"
+    img: "moisturizing-mousse"
   },
   {
     title: "Увлажняющая маска",
@@ -21,7 +21,7 @@ export const productCards = [
       "масла"
     ],
     price: 3500,
-    img: "/images/moisturizing-mask.png"
+    img: "moisturizing-mask"
   },
   {
     title: "Гель для умывания",
@@ -33,7 +33,7 @@ export const productCards = [
       "солнцезащитные компоненты"
     ],
     price: 1650,
-    img: "/images/face-wash-gel.png"
+    img: "face-wash-gel"
   },
   {
     title: "Подарочный набор №1",
@@ -45,7 +45,7 @@ export const productCards = [
       "масла"
     ],
     price: 4750,
-    img: "/images/gift-set-number-1.png"
+    img: "gift-set-number-1"
   },
   {
     title: "Подарочный набор №5",
@@ -57,6 +57,6 @@ export const productCards = [
       "масла"
     ],
     price: 7520,
-    img: "/images/gift-set-number-5.png"
+    img: "gift-set-number-5"
   }
 ];

@@ -44,7 +44,7 @@ function renderCards(cards) {
     const clone = template.content.cloneNode(true);
     
     const img = clone.querySelector('.product-card__img');
-    img.src = cardData.img;
+    img.src = `../images/${cardData.img}.png`;
     img.alt = cardData.title;
 
     clone.querySelector('.product-card__skin-type').textContent = cardData.skinType;
