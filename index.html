@@ -31,12 +31,70 @@
         </div>
       </section>
     </template>
+  </main>
+  <footer class="shop-footer">
+    <div class="footer-container">
+      <div>
+        <h2 class="footer-title">Product Cards</h2>
+        <p class="footer-subtitle">У нас самые лучшие продукты для кожи!</p>
+        <div class="footer-social">
+          <img src="./icons/telegram-icon.svg" alt="Telegram" class="footer-social__icon">
+          <img src="./icons/vk-icon.svg" alt="VK" class="footer-social__icon">
+        </div>
+      </div>
+      <p class="footer-center-text">Подпишись на наши акции:</p>
+      <form class="footer-subscribe-box" id="subscribe-form">
+        <input type="email" name="email" class="subscribe-input" placeholder="Введите почту" required>
+        <button type="submit" class="footer-button">Подписаться</button>
+      </form>
+      <nav class="footer-nav">
+        <a href="#" class="footer-nav__main">Быстрые ссылки</a>
+        <div class="footer-nav__links">
+          <a href="#" class="footer-link">Главная</a>
+          <a href="#" class="footer-link">Магазин</a>
+          <a href="#" class="footer-link">Контакты</a>
+        </div>
+      </nav>   
+    </div>
+    <p class="footer-site">www.product-cards.com©all right reserve</p>
+  </footer>
+
+  <button id="register-btn">Регистрация</button>
+  <div class="overlay"></div>
+   
+  <div class="modal">
+    <div class="modal__content">
+      <button class="modal__close" type="button">x</button>
+      <h2 class="registration-title">Регистрация</h2>
+      <form class="registration-form" id="reg-form">
+        <label for="firstName">Имя</label>
+        <input id="firstName" name="firstName" placeholder="Введите имя" required>
+
+        <label for="lastName">Фамилия</label>
+        <input id="lastName" name="lastName" placeholder="Введите фамилию" required>
+
+        <label for="birthDate">Дата рождения</label>
+        <input id="birthDate" name="birthDate" type="date" required>
+
+        <label for="login">Логин</label>
+        <input id="login" type="email" name="login" required minlength="5">
+
+        <label for="password">Пароль</label>
+        <input id="password" name="password" type="password" required minlength="6">
+
+        <label for="repeatPassword">Повтор пароля</label>
+        <input id="repeatPassword" name="repeatPassword" type="password" required minlength="6">
+
+        <button type="submit">Зарегистрироваться</button>
+      </form>
+    </div>
+  </div>
 
     <script src="script.js"></script>
     <script src="homework-5.js"></script>
     <script src="homework-6.js"></script>
     <script type="module" src="homework-7.js"></script>
     <script type="module" src="homework-8.js"></script>
-  </main>
+    <script type="module" src="homework-9.js"></script>    
 </body>
 </html>
