@@ -165,7 +165,7 @@ async function getAllUsers() {
 async function init() {
   const cached = getUsersFromStorage();
 
-  if (cached && cached.length > 0) {
+  if (cached !== null) {
     hide(loader);
     show(content);
     renderUsers(cached);
