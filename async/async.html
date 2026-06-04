@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="async.css">
+</head>
+<body>
+  <main>
+    <div id="content" class="content-wrapper hidden">
+      <div class="title">Пользователи</div>
+      
+      <div class="controls">
+        <button id="btn-get-all">Получить все карточки</button>
+        <button id="btn-delete-all">Удалить все карточки</button>
+      </div>
+
+      <div id="users-list" class="users-cards"></div>
+      <div id="message" class="message hidden"></div>
+    </div>
+
+    <div id="loader" class="loading">Данные загружаются</div>
+
+    <div id="error" class="error hidden">Ошибка при загрузке данных</div>
+  </main>
+
+  <script src="async.js"></script>
+</body>
+</html>
